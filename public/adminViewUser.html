@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/adminViewUsers.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="./css/view.css">
+  
+</head>
+<body>
+    <div id="name">
+        <h1> Admin Dashboard</h1>
+        <a id='add' data-toggle="modal" data-target="#Add" data-uid="1" style="font-size: 25px;" >Create Task</a>
+        <a  id="get"  href="adduser.html" style="font-size: 25px;">Assign Tasks</a>
+        <a id="get" href="adminEditUser.html"style="font-size: 25px;">Edit Tasks</a>
+        
+        <a id="get1" href="index.html" style="font-size: 25px; margin-left: 10%;"> Logout </a>
+      </div>
+
+      <div id="addTable" style="margin-top: 10%;">
+
+      </div>
+<!-- Add Form-->
+      <div >
+        <div id="Add" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">×</button>
+                <h4 class="modal-title">Add Task</h4>
+              </div>
+              <div class="modal-body">
+                <input id="title" type="text" class="form-control" name="fname" placeholder="Title">
+                <br>
+                <div class="countryadder">
+  
+                  <input id="description" type="text" class="form-control" name="fname" placeholder="Description">
+                </div>
+                <br>
+                
+                <div class="countryadder">
+                 
+                  <input id="duration" type="text" class="form-control" name="fname" placeholder="Duration">
+                </div>
+                <br>
+               
+                <label for="cars">Choose Status</label>
+  
+                <select name="cars" id="status">
+                  <option value="Completed">Completed</option>
+                  <option value="Pending">Pending</option>
+                  <option value="In Progress">In Progress</option>
+                </select>
+             
+              </div>
+              <div class="modal-footer">
+                <button type="button" id="up" class="btn btn-warning" data-dismiss="modal"
+                  onclick="addUsers()">Add Task</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Assign popup-->
+      <div class="modal fade" id="AssignModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Assign Task</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="assignModal">
+              
+             </div>
+            <div class="modal-footer" id="assignFooter">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+    
+</body>
+</html>

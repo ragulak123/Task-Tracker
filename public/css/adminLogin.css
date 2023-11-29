@@ -1,0 +1,86 @@
+#table1 {
+  margin-top: 3%;
+  font-size: 15px;
+  background-color: #fff;
+  color: #333;
+}
+body {
+  background-image: url("./try.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#name {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  display: inline-flex;
+  background-color: rgb(89, 6, 92);
+  width: 100%;
+  text-align: center;
+  height: 70px;
+}
+a:hover {
+  cursor: pointer;
+  color: red;
+}
+h1 {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 230px;
+  color: white;
+}
+#get1 {
+  color: rgb(233, 236, 9);
+  font-size: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 5px;
+}
+#get {
+  color: rgb(233, 236, 9);
+  font-size: 20px;
+  padding-top: 20px;
+  padding-left: 180px;
+  padding-right: 20px;
+}
+#add {
+  color: rgb(233, 236, 9);
+  font-size: 20px;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+.modal-header {
+  background-color: rgba(121, 9, 115, 0.911);
+  color: #fff;
+}
+#dtaa {
+  display: inline-block;
+  margin-top: 5.5%;
+  margin-left: 1050px;
+}
+th {
+  background-color: aquamarine;
+}
+#dtaa h5 {
+  font-size: 20px;
+}
+.countryadder {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.ln3 {
+  width: 98%;
+  border-radius: 8px;
+  border: 2px solid black;
+  height: 30px;
+}
+.ln {
+  border-radius: 5px;
+  height: 40px;
+  margin: 10px;
+}

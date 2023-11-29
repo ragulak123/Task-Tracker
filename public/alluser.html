@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Dashboard</title>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./css/alluser.css">
+</head>
+<body>
+    <body >
+     
+        <div id="name">
+            <h1>All Users Task</h1>
+            <a  id="get"  href="userLogin.html" style="font-size: 25px; margin-left: 40%;"> My Dashboard</a>
+            
+            <a id="get1" href="index.html"style="font-size: 25px;" > Logout </a>
+          </div>
+          <div id="dtaa">
+            
+          </div>
+    <div class="container">
+    <div class="row">
+    <table class="table table-hover table-responsive" id="table1">
+    <thead id="adminhead">
+    </thead>
+         <tbody id="adminbody" >
+    </tbody>
+    </table>
+    </div>
+    </div>
+    <div>
+    <div id="Add" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+    <div class="modal-content">
+    <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal">×</button>
+    <h4 class="modal-title">Add Task</h4>
+    </div>
+    <div class="modal-body">
+    <input id="Games" type="text" class="form-control" name="fname" placeholder="Title">
+    <br>
+    <div class="countryadder">
+    
+      <input id="CountryAdd1" type="text" class="form-control" name="fname" placeholder="Description">
+    </div>
+    <br>
+    <div class="countryadder">
+      
+  <label for="cars">Choose Status</label>
+
+  <select name="cars" id="MedalAdd1">
+  <option value="Completed">Completed</option>
+  <option value="Pending">Pending</option>
+  <option value="In Progress">In Progress</option>
+</select>
+   
+    </div>
+    <div class="modal-footer">
+    <button type="button" id="up" class="btn btn-warning" data-dismiss="modal"onclick="addUserDetails()">Add Task</button>
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div id="Update"></div>
+    
+    <div id="modal123"></div>
+
+    <script src="./js/allUsers.js"></script>
+  </body>
+</body>
+</html>

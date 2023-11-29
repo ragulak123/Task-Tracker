@@ -1,0 +1,307 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-position: 1050px 200px;
+  background-repeat: no-repeat;
+  background-image: url("https://99social.co.uk/wp-content/uploads/2020/07/Time-management-1.gif?is-pending-load=1");
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+  padding-bottom: 30px;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 30px;
+  margin-top: 1%;
+}
+
+.topnav a:hover {
+  background-color: rgb(241, 81, 81);
+  color: black;
+}
+
+.topnav a.active {
+  /* background-color: #2196F3; */
+  color: black;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type="text"] {
+  padding: 6px;
+  margin-top: 6%;
+  font-size: 30px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: left;
+  padding: 15px 80px;
+  margin-top: 30px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: rgb(54, 20, 20);
+}
+
+.button1 {
+  margin-left: 200px;
+  font-size: 30px;
+}
+#demo {
+  background-color: black;
+  padding: 30px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+#rows {
+  background-color: aquamarine;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 20px 0;
+  text-align: center;
+}
+
+ul.responsive-table {
+  background-color: white;
+}
+li {
+  border-radius: 3px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  font-size: 30px;
+  margin-left: -30%;
+  width: 80%;
+}
+.table-header {
+  background-color: #38b2bb;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.table-row {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+.col-1 {
+  flex-basis: 10%;
+}
+.col-2 {
+  flex-basis: 10%;
+}
+.col-3 {
+  flex-basis: 25%;
+}
+.col-4 {
+  flex-basis: 25%;
+}
+
+#top {
+  background-color: ghostwhite;
+  width: 60%;
+  margin-left: 20%;
+}
+button {
+  background-color: white;
+  color: rgb(65, 4, 145);
+  font-size: 25px;
+}
+#searching {
+  padding: 20px;
+  float: right;
+  padding-left: 117px;
+  margin-right: 7%;
+  margin-top: 2%;
+  border-radius: 20px;
+}
+#sub {
+  margin-left: 72%;
+  border: none;
+  margin-top: 2%;
+}
+#myForm {
+  display: none;
+  width: 45%;
+  height: 250px;
+  font-size: 30px;
+  background-color: rgb(238, 248, 248);
+  padding: 30px;
+  margin-left: 60%;
+  margin-top: 10px;
+}
+#head {
+  margin-right: 30%;
+  background-color: palegreen;
+}
+article {
+  --img-scale: 1.001;
+  --title-color: black;
+  --link-icon-translate: -20px;
+  --link-icon-opacity: 0;
+  position: relative;
+  border-radius: 16px;
+
+  width: 50%;
+  background-color: rgb(195, 221, 244);
+  transform-origin: center;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+  margin-left: 25%;
+  margin-top: 2%;
+}
+
+article a::after {
+  position: absolute;
+  inset-block: 0;
+  inset-inline: 0;
+  cursor: pointer;
+  content: "";
+}
+
+/* basic article elements styling */
+article h2 {
+  margin: 0 0 18px 0;
+  text-align: center;
+  font-size: 1.9rem;
+  letter-spacing: 0.06em;
+  color: var(--title-color);
+  transition: color 0.3s ease-out;
+}
+.article-body {
+  padding: 12px;
+  width: 100%;
+}
+
+article a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: #28666e;
+}
+
+article a:focus {
+  outline: 1px dotted #28666e;
+}
+
+article a .icon {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  margin-left: 5px;
+  transform: translateX(var(--link-icon-translate));
+  opacity: var(--link-icon-opacity);
+  transition: all 0.3s;
+}
+
+/* using the has() relational pseudo selector to update our custom properties */
+article:has(:hover, :focus) {
+  --img-scale: 1.1;
+  --title-color: #28666e;
+  --link-icon-translate: 0;
+  --link-icon-opacity: 1;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+/************************ 
+Generic layout (demo looks)
+**************************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+span {
+  font-size: 30px;
+  font-weight: bold;
+  width: -390px;
+
+  /* color: rgb(81, 81, 99); */
+  /* padding: 50px; */
+}
+h3 {
+  color: navy;
+}
+
+.articles {
+  display: grid;
+  max-width: 100px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+#menu {
+  font-size: 30px;
+}
+#userTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+  font-size: 25px;
+}
+
+#userTable td,
+#userTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#userTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#userTable tr:hover {
+  background-color: #ddd;
+}
+
+#userTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #28666e;
+  color: white;
+}
+#submit {
+  background-color: #28666e;
+  color: white;
+  text-align: center;
+  margin-left: 20%;
+}
+#comments {
+  padding: 30px;
+  font-size: 20px;
+  border-radius: 20px;
+}
+.fa-plus {
+  border: none;
+  margin-right: 30%;
+  border: white;
+  border-radius: 20px;
+}
