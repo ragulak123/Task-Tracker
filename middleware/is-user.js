@@ -1,5 +1,11 @@
 const { verify } = require("jsonwebtoken");
-
+/**
+ * Fetch token from the request header from auth-user
+ * @param {*} req request from the auth-user
+ * @param {*} res response from the auth-user
+ * @param {*} next call the next function in the route
+ * @returns calling the next function
+ */
 module.exports = (req, res, next) => {
   const token = req.get("x-user-auth-token");
   if (!token || token === "") {

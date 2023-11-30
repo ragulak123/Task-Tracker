@@ -1,8 +1,13 @@
 const { hash, compare } = require("bcryptjs");
 const { sign } = require("jsonwebtoken");
-
 const User = require("../models/User");
 
+/**
+ * Register a new user in the database
+ * @param {*} req Get payload from the server
+ * @param {*} res Response to the user
+ * @returns Acknowledge the user
+ */
 exports.register = async (req, res, next) => {
   const { username, email, password, role } = req.body;
   if (!username || !email || !password || !role)
@@ -27,6 +32,12 @@ exports.register = async (req, res, next) => {
   }
 };
 
+/**
+ * Get login and verify the user is valid
+ * @param {*} req Get login payload from the server
+ * @param {*} res Response to the user
+ * @returns JWT token for a user
+ */
 exports.login = async (req, res, next) => {
   const { username, password } = req.body;
   try {
@@ -42,7 +53,12 @@ exports.login = async (req, res, next) => {
     return res.status(500).send(error.message);
   }
 };
-
+/**
+ * Get authorised user
+ * @param {*} req Request from the server
+ * @param {*} res Response to the user
+ * @returns Return user if the token is valid
+ */
 exports.getAuthUser = async (req, res, next) => {
   try {
     const user = await User.findById(req?.user?._id).select("-password").lean();

@@ -1,10 +1,11 @@
-const { hash, compare } = require("bcryptjs");
-const { sign } = require("jsonwebtoken");
-
-const User = require("../models/User");
 const Task = require("../models/Task");
+/**
+ * Create a new task
+ * @param {*} req Get the payload from request
+ * @param {*} res Return the response to the user
+ * @returns newly created task object
+ */
 
-// Add tasks in DB
 exports.addTask = async (req, res) => {
   try {
     const taskObj = req.body;
@@ -17,7 +18,12 @@ exports.addTask = async (req, res) => {
   }
 };
 
-// Get all tasks
+/**
+ * Get all the tasks from the database
+ * @param {*} req Request from the server
+ * @param {*} res Response to the user
+ * @returns Display all available tasks in the database
+ */
 exports.getAllTasks = async (req, res, next) => {
   try {
     const tasks = await Task.find();
@@ -26,8 +32,12 @@ exports.getAllTasks = async (req, res, next) => {
     return res.status(500).json(error);
   }
 };
-
-// Update tasks in DB
+/**
+ * Update the specific task
+ * @param {*} req Request from the server
+ * @param {*} res Response to the user
+ * @returns return the updated task to the user
+ */
 exports.updateTask = async (req, res) => {
   try {
     const id = req.params.id;
@@ -38,12 +48,16 @@ exports.updateTask = async (req, res) => {
       updatedTask,
     });
   } catch (error) {
-  
     return res.status(400).json({ message: error });
   }
 };
 
-// DeleteTask in DB
+/**
+ * Delete the specific task in the Database
+ * @param {*} req Request from the server
+ * @param {*} res Response to the user
+ * @returns Give status acknowledgement to the user that specific task is deleted
+ */
 exports.deleteTask = async (req, res) => {
   try {
     const id = req.params.id;
@@ -53,7 +67,11 @@ exports.deleteTask = async (req, res) => {
     return res.status(500).send(error.message);
   }
 };
-//taskFind
+/**
+ * get the input from the user and display the specific data
+ * @param {*} req get payload from the server
+ * @param {*} res response to the user
+ */
 exports.getStatus = async (req, res) => {
   try {
     const id = req.params.id;
@@ -70,19 +88,14 @@ exports.getStatus = async (req, res) => {
     var result;
     if (getid.length != 0) {
       result = getid;
-      
     } else if (getname.length != 0) {
       result = getname;
-      console.log("Taskname", result);
     } else if (getdescription.length != 0) {
       result = getdescription;
-      
     } else if (getpriority.length != 0) {
       result = getpriority;
-     
     } else if (getduration.length != 0) {
       result = getduration;
-      
     } else if (getassign.length != 0) {
       result = getassign;
     }
